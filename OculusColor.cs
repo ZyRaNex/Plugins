@@ -1,16 +1,9 @@
-using System.Globalization;
 using Turbo.Plugins.Default;
 using System.Linq;
-using SharpDX.DirectInput;
 
-using System;
-using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using System.Collections.Generic;
 namespace Turbo.Plugins.Zy
 {
-    public class OculusColor : BasePlugin, IInGameWorldPainter
+    public class OculusColor : BasePlugin, IInGameWorldPainter, ICustomizer
     {
         public WorldDecoratorCollection DecoratorBase { get; set; }
         public WorldDecoratorCollection DecoratorClosest { get; set; }
@@ -82,19 +75,22 @@ namespace Turbo.Plugins.Zy
                 }
                 );
         }
-
+        public void Customize()
+        {
+            Hud.TogglePlugin<OculusPlugin>(false);
+        }
         public void PaintWorld(WorldLayer layer)
         {
             if (Hud.Game.IsInTown) return;
 
             IWorldCoordinate WizPosition = Hud.Game.Players.First().FloorCoordinate;
-            bool WizardIngame = false;
-            foreach (var player in Hud.Game.Players)//others
+            int WizardsIngame = 0;
+            foreach (var player in Hud.Game.Players)
             {
                 if (player.HeroClassDefinition.HeroClass == HeroClass.Wizard)
                 {
                     WizPosition = player.FloorCoordinate;
-                    WizardIngame = true;
+                    WizardsIngame++;
                 }
             }
 
@@ -115,7 +111,7 @@ namespace Turbo.Plugins.Zy
                 }
                 foreach (var actor in actors)
                 {
-                    if (WizardIngame)
+                    if (WizardsIngame == 1)
                     {
                         if (actor == closest)
                         {
