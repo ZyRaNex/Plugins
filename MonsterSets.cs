@@ -154,7 +154,7 @@ namespace Turbo.Plugins.Zy
             { "Anarch", "Armored Destroyer", "Blood Clan Warrior", "Canine Bones", "Corpse Raiser", "Demonic Hellflyer", "Demon Trooper", "Hungering Bones", "Morlu Incinerator",
                 "Plague Carrier", "Risen Bones", "Sand Wasp", "Shade Stalker", "Skeletal Beast", "Spitting Bones", "Terror Demon", "Vile Bat", "Winged Assassin"}),
 
-            new MonsterSet("Oppressor Vile Temptress", new List<string>
+            new MonsterSet("Oppressor Hell Witch", new List<string>
             { "Blazing Ghoul", "Fallen Overseer", "Moon Clan Impaler", "Oppressor", "Subjugator", "Vile Temptress"}),
 
             new MonsterSet("Blazing Guardian", new List<string>
@@ -211,7 +211,7 @@ namespace Turbo.Plugins.Zy
             }
 
             var BadMonsters = new List<string>
-            { "Shock Tower", "Hell Bringer", "Blazing Swordwielder", "Bloated Corpse"};
+            { "Shock Tower", "Hell Bringer", "Blazing Swordwielder", "Bloated Corpse", "Spiderling"};
 
             foreach (string monstername in BadMonsters)
             {
