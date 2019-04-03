@@ -158,7 +158,7 @@ namespace Turbo.Plugins.Zy
             { "Blazing Ghoul", "Fallen Overseer", "Moon Clan Impaler", "Oppressor", "Subjugator", "Vile Temptress"}),
 
             new MonsterSet("Blazing Guardian", new List<string>
-            { "Barbed Lurker", "Blazing Guardian", "Dark Berserker", "Dark Hellion", "Grim Wraith", "Hulking Phasebeast", "Hungry Corpse", "Hungry Torso", "Inferno Zombie",
+            { "Barbed Lurker", "Bile Crawler", "Blazing Guardian", "Dark Berserker", "Dark Hellion", "Grim Wraith", "Hulking Phasebeast", "Hungry Corpse", "Hungry Torso", "Inferno Zombie",
                 "Murderous Fiend", "Returned Archer"}),
 
             new MonsterSet("Porcupoggers", new List<string>
