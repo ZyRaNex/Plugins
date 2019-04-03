@@ -249,10 +249,10 @@ namespace Turbo.Plugins.Zy
                         RemoveList.Add(monsterset);
                     }
                 }
-            }
-            foreach (MonsterSet monsterset in RemoveList)
-            {
-                MatchingMonsterSets.Remove(monsterset);
+                foreach (MonsterSet monsterset in RemoveList)
+                {
+                    MatchingMonsterSets.Remove(monsterset);
+                }
             }
             if (MatchingMonsterSets.Count < 20)
             {
